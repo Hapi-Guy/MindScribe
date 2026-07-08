@@ -26,16 +26,12 @@ class DatabaseSeeder extends Seeder
 
         // to create categories and post into DB
         $categories=[
-            'Artificial Intelligence',
-            'Machine Learning',
-            'Deep Learning',
-            'Neural Networks',
-            'Data Science',
-            'Big Data',
-            'Cloud Computing',
-            'Internet of Things',
-            'Cybersecurity',
-            'Blockchain'
+            'Web Programming Lab',
+            'Operating Systems',
+            'Embedded Systems and IoT',
+            'Applied Stat',
+            'Database Systems',
+            'Information Systems and Design'
         ];
         foreach($categories as $category){
             Category::create([
