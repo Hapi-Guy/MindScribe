@@ -22,7 +22,7 @@
             </div>
 
             <div class="mt-6 text-gray-900">
-                @foreach ($posts as $post)
+                @forelse ($posts as $post)
                     <div class="flex bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 mb-4">
                         <div class="p-6 flex-1">
                             <a href="#">
@@ -31,7 +31,7 @@
                                 </h5>
                             </a>
                             <div class="mb-6 font-normal text-gray-600 dark:text-gray-400">
-                                {{ Str::words($post->content,20)}}
+                                {{ Str::words($post->content,15)}}
                             </div>
                             <a href="#"
                                 class="inline-flex items-center text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 focus:outline-none">
@@ -48,8 +48,13 @@
                             <img class="w-48 h-full rounded-r-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
                         </a>
                     </div>
-                @endforeach
+                @empty
+                    <div class="text-center text-gray-400 py-10">
+                        <p class="font-bold text-gray-900 dark:text-gray-100">No posts found</p>
+                    </div>
+                @endforelse
             </div>
+            {{ $posts->onEachSide(2)->links() }}
         </div>
     </div>
 </x-app-layout>

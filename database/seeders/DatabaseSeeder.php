@@ -25,23 +25,23 @@ class DatabaseSeeder extends Seeder
 
 
         // to create categories and post into DB
-        $categories=[
-            'Web Programming Lab',
-            'Operating Systems',
-            'Embedded Systems and IoT',
-            'Applied Stat',
-            'Database Systems',
-            'Information Systems and Design'
-        ];
-        foreach($categories as $category){
-            Category::create([
-                'name' => $category,
-            ]);
-        }
-        Post::factory(100)->create();
+        // $categories=[
+        //     'Web Programming Lab',
+        //     'Operating Systems',
+        //     'Embedded Systems and IoT',
+        //     'Applied Stat',
+        //     'Database Systems',
+        //     'Information Systems and Design'
+        // ];
+        // foreach($categories as $category){
+        //     Category::create([
+        //         'name' => $category,
+        //     ]);
+        // }
+        // Post::factory(100)->create();
 
-        // $this->call([
-        //     PostSeeder::class
-        // ]);
+        //// $this->call([
+        ////     PostSeeder::class
+        //// ]);
     }
 }

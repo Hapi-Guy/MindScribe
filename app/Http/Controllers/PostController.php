@@ -15,7 +15,9 @@ class PostController extends Controller
     public function index()
     {
         $categories = Category::get();
-        $posts = Post::orderBy('created_at', 'DESC')->get();
+        $posts = Post::orderBy('created_at', 'DESC')->simplePaginate(5);
+        //using paginate instead of get method to display only 5 posts per page.
+        //and for pages in post controller page->links() used
         //dump($categories);
         //checked dump if the categories are displaying in the webpage. 
 
