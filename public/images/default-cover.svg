@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-label="Default cover image">
+  <rect width="1200" height="600" fill="#e5e7eb"/>
+  <path d="M0 470 L300 300 L520 430 L780 210 L1200 470 L1200 600 L0 600 Z" fill="#cbd5e1"/>
+  <circle cx="930" cy="150" r="70" fill="#cbd5e1"/>
+  <text x="600" y="560" font-family="Arial, Helvetica, sans-serif" font-size="42" fill="#64748b" text-anchor="middle">MindScribe &middot; No cover image</text>
+</svg>
