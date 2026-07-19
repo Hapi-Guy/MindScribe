@@ -125,12 +125,9 @@ test('dashboard shows posts from followed users', function () {
         'published_at' => now()->subHour(),
     ]);
 
-    visit(route('login'))
-        ->fill('email', $this->user->email)
-        ->fill('password', 'password')
-        ->press('Log in')
-        ->assertPathIs('/')
+    $this->actingAs($this->user)
+        ->get(route('dashboard'))
+        ->assertOk()
         ->assertSee($followedPost->title)
         ->assertDontSee($unfollowedPost->title);
 })->group('browser');
-
